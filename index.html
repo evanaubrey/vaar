@@ -11,7 +11,6 @@
         <a-curve-point position="0 1.6 -1"></a-curve-point>
         <a-curve-point position="0 3.8 -2"></a-curve-point>
     </a-curve>
-
     <!-- DRAW CURVE FOR TESTING
     <a-draw-curve curveref="#track1" material="shader: line; color: blue;"></a-draw-curve>
     -->
@@ -21,8 +20,8 @@
 
     <a-entity collada-model="#balloon"
               position='0 0.5 0'
-              rotation='180 0 0'
-              alongpath="curve: #track1; loop:true; dur:5000; rotate:true;">
+              rotation='0 0 0'
+              alongpath="curve: #track1; loop:true; dur:5000; rotate:false;">
        <!--
         <a-animation attribute="scale"
                      dur="3000"
