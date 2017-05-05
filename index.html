@@ -16,23 +16,42 @@
     -->
     <a-assets>
         <a-asset-item id="balloon" src="models/balloon.dae"></a-asset-item>
+        <a-asset-item id="balloon_red" src="models/balloon_red.dae"></a-asset-item>
     </a-assets>
-
-    <a-entity collada-model="#balloon"
-              position='0 0.5 0'
-              rotation='0 0 0'
-              alongpath="curve: #track1; loop:true; dur:5000; rotate:false;"
-              <!--
-              sound="src: url(inflate_sound.mp3); on: movingstarted"
-              sound="src: url(pop_sound.mp3); on: movingended">
-              -->
+    <a-marker preset='hiro'>
+        <a-entity collada-model="#balloon"
+                  position='0 0.5 0'
+                  rotation='0 0 0'
+                  alongpath="curve: #track1; loop:true; dur:5000; rotate:false;"
+        <!--
+        sound="src: url(inflate_sound.mp3); on: movingstarted"
+        sound="src: url(pop_sound.mp3); on: movingended">
+        -->
         <a-animation attribute="scale"
                      dur="5000"
                      from="0 0 0"
                      to="1 1 1"
                      repeat="indefinitely">
         </a-animation>
-    </a-entity>
-    <a-marker-camera preset='hiro'></a-marker-camera>
+        </a-entity>
+    </a-marker>
+    <a-marker preset='kanji'>
+        <a-entity collada-model="#balloon_red"
+                  position='0 0.5 0'
+                  rotation='0 0 0'
+                  alongpath="curve: #track1; loop:true; delay: 2000; dur:5000; rotate:false; "
+        <!--
+        sound="src: url(inflate_sound.mp3); on: movingstarted"
+        sound="src: url(pop_sound.mp3); on: movingended">
+        -->
+        <a-animation attribute="scale"
+                     begin="2000"
+                     dur="5000"
+                     from="0 0 0"
+                     to="1 1 1"
+                     repeat="indefinitely">
+        </a-animation>
+        </a-entity>
+    </a-marker>
 </a-scene>
 </body>
